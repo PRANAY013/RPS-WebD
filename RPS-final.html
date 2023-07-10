@@ -85,7 +85,7 @@
             <button class="buttonx"
             onclick=
             "
-            playGame('Rock')
+            playGame('rock')
             "
             ><img src="imagesRPS\rock-emoji.png" class="iconx"></button>
 
@@ -94,7 +94,7 @@
             <button class="buttonx"
             onclick=
             "
-            playGame('Paper')
+            playGame('paper')
             "
             ><img src="imagesRPS\paper-emoji.png" class="iconx"></button>
             
@@ -104,7 +104,7 @@
             <button class="buttonx"
             onclick=
             "
-            playGame('Scissors')
+            playGame('scissors')
             "
             ><img src="imagesRPS\scissors-emoji.png" class="iconx"></button>
         </p>
@@ -183,15 +183,15 @@
 
             if(randomNumber >=0 && randomNumber <1/3 )
             {
-                computerMove = 'Rock' ;
+                computerMove = 'rock' ;
             }
             else if (randomNumber>=1/3  && randomNumber <2/3)
             {
-                computerMove = 'Paper';
+                computerMove = 'paper';
             }
             else if (randomNumber>=2/3 && randomNumber<1)
             {
-                computerMove = 'Scissors';
+                computerMove = 'scissors';
             }
 
             }
@@ -204,35 +204,35 @@
                 let result ='';
 
 
-                if (playerMove === 'Scissors')
+                if (playerMove === 'scissors')
                 {
-                    if (computerMove === 'Scissors')
+                    if (computerMove === 'scissors')
                     {
                         result = 'Tie' ;
                     }
-                    else if (computerMove === 'Rock')
+                    else if (computerMove === 'rock')
                     {
                         result = 'You Lose';
                     }
-                    else if (computerMove === 'Paper')
+                    else if (computerMove === 'paper')
                     {
                         result = 'You Win'
                     }
                 }
                 
 
-                if (playerMove === 'Paper')
+                if (playerMove === 'paper')
                 {
                     
-                    if (computerMove === 'Paper')
+                    if (computerMove === 'paper')
                     {
                         result = 'Tie' ;
                     }
-                    else if (computerMove === 'Scissors')
+                    else if (computerMove === 'scissors')
                     {
                         result = 'You Lose';
                     }
-                    else if (computerMove === 'Rock')
+                    else if (computerMove === 'rock')
                     {
                         result = 'You Win'
                     }
@@ -240,18 +240,18 @@
                 }
 
 
-                if (playerMove === 'Rock')
+                if (playerMove === 'rock')
                 {
                 
-                    if (computerMove === 'Rock')
+                    if (computerMove === 'rock')
                     {
                         result = 'Tie' ;
                     }
-                    else if (computerMove === 'Paper')
+                    else if (computerMove === 'paper')
                     {
                         result = 'You Lose';
                     }
-                    else if (computerMove === 'Scissors')
+                    else if (computerMove === 'scissors')
                     {
                         result = 'You Win' ;
                     }
@@ -281,7 +281,7 @@
                 updateScoreElement();
 
                 updateResultElement();
-
+ 
                 updateMoveElement();
 
                 
@@ -293,8 +293,8 @@
                 {
                     document.querySelector('.js-moves')
                     .innerHTML= 
-                    `  You<img class="iconxyz"src="imagesRPS\${playerMove}-emoji.png">
-                        <img class="iconxyz"src="imagesRPS\${computerMove}-emoji.png" >Computer
+                    `  You<img class="iconxyz"src="imagesRPS/${playerMove}-emoji.png">
+                        <img class="iconxyz"src="imagesRPS/${computerMove}-emoji.png" >Computer
                     ` 
 
                 };
