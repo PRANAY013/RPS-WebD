@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BOOLEAN.IFS.OPERATORS</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+
+    <script>
+/*
+        //booleans=true/false
+        //comparisions=(>,<,>=,<=,===,!==)
+        // (===,!==)avoids conversion
+        // (==,!=)converts values then compares leading to sometimes numbers being equated to strings, for example
+        //boolean operaters have lower priority than math operators
+
+        //now on to IF statement using booleans
+
+        if(true)
+        {
+            console.log('Its True');
+        }
+
+        if(false)
+        {
+            console.log('False Will not show');
+        }
+        else
+        {
+            console.log('False');
+        }
+
+        if (30>=18)
+        {
+            console.log('You can drive.')
+        }
+
+        if (15>=16)
+        {
+            console.log('you can drive'); 
+        }
+        else if (15>=14)
+        {
+          console.log('Almost there!');
+        }
+        else (15<14)
+        {
+            console.log('You can not drive.');
+        }
+
+
+        //replace with " const age "
+*/        
+  
+//logic<prioritythanmath
+//(!true=false)(!false=true)
+
+//var is global hence possibly creating conflicting values
+//const doesnt change its value 
+//let is used to assign a variable 
+//(let)variable's value can be changed by using----  variableName=newValue
+//these are the scopes of var const let etc.
+
+
+
+ //and operator
+  console.log(true&&true);   
+  console.log(true&&false);
+  console.log(false&&false);
+
+  console.log(0.2>=0 &&0.2<1/3)         
+  
+
+
+ // or operator
+
+  console.log(true||true);      
+  console.log(true||false);
+  console.log(false||false);
+  
+  
+
+    // Truthy and Falsy values 
+    //falsy values (6 in total)----  false , 0 ,  ''  ,NaN , undefined , null  
+    // except the 6 falsy values all are truthy values.
+
+
+
+/* 
+FOLLOWING TEXT CONTAINS STUFF ABOUT OPERATERS AND ARE BASICALLY A ONE LINER REPLACEMENT TO AN IF STATEMENT 
+*/
+
+/*
+ternary operator  
+
+can be thought of as     if else :: ? :
+
+
+const result = true/false ? 'truthy' : 'falsy';
+console.log(result);
+
+if true then value after ? 
+else value after :
+
+if false then value after :
+
+*/
+
+/*
+
+guard operator(uses "and" and early stopping of code ie on the first part)
+
+false && console.log('hello')
+
+const message = false && 'hello' ;
+console.log (message);
+
+
+default operator--- or operator---- ||
+
+const currency= 'EUR' || 'USD' ;
+console.log(currency);
+here is the first input ie EUR is present then same will be used otherwise the usd  will be taken as a default input.
+
+
+
+
+*/
+</script>
+
+    
+
+</body>
+
+
+</html>

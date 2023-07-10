@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <title>DomObj</title>
+
+
+    </head>
+
+
+    <body>
+
+
+        <p> Amazon Shipping Calculator</p>
+        
+        <p>Orders under $50 = $10 shipping fee</p>
+        <p>Orders over $50 = FREE shipping</p>
+
+        <input placeholder="Cost of Order" 
+        class="js-ordercostINP" 
+        onkeydown="calculateCost()" >
+        <button onclick="
+        calculateCost()
+        ">Calculate</button>
+
+        <p class="js-totalcost"></p>
+
+        
+
+        <script>
+
+        /*    //DOM combines JS and HTML elements together and it gived JS control over the webpage.
+
+            //and hence...HTML element is converted into JS object
+
+
+            console.log(document.title);
+            document.title = 'DOM';
+
+
+            console.log(document.body);
+
+            console.log(document.body.innerHTML);
+            document.body.innerHTML = '<button>Good Job!</button>' ;
+
+
+            console.log(document.querySelector('button'));
+            
+            document.querySelector('button')
+                .innerHTML ='changed';
+                //will conly target the first button
+                //for second you gotta ad the class thingy in the button
+
+  
+            document.body.innerHTML = 'Hello';
+            document.title = 'Good Job!';
+        */
+
+
+            function calculateCost()
+            {
+               const inputElm = document.querySelector('.js-ordercostINP');
+
+               let cost = Number (inputElm.value) ;
+
+               if (cost<50 && cost>=0)
+               {
+                cost =  cost + 10  ;
+               }
+               else
+               {
+                cost = cost ;
+               }
+
+               document.querySelector('.js-totalcost')
+               .innerHTML=`$${cost}`;
+            }
+
+            //value outputs from DOM are always in the form of string
+        </script>
+
+
+    </body>
+
+</html>

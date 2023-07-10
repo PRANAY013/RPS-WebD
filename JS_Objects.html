@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>JS-Objects</title>
+</head>
+<body>
+    <script>
+        
+
+   
+        // (((object property dot notation)))
+
+            //basics
+        
+                const product =
+                {
+                    name: 'socks' ,
+                    price: 1098 
+                };
+                
+                console.log(product);
+                console.log(product.name);
+                console.log(product.price);
+
+                product.newproperty = true ;
+                console.log(product) ;
+
+                delete product.newproperty ;
+            
+            
+
+            //lil adv calling and functions and nesting n stuff
+
+                const product2 = 
+                {
+                    name: 'shirt' ,
+                    'delivery-time' : '1 day',
+                    rating :
+                    {
+                        stars: 4.75 , 
+                        count : 87
+                    },
+                    fun: function funtion1()
+                    {
+                        console.log('function inside object');
+                    }
+
+                
+                };
+
+                console.log(product2);
+                console.log(product2.name);
+                console.log(product2['name']);
+                console.log(product2.rating);
+                console.log(product2['delivery-time']);
+                //since the - sign creates confusion for the code being read by the computer.
+                //hence the brackett system can be used instead of the more common dot system to call objects
+                console.log(product2.rating.count);
+            
+                product2.fun();
+
+                console.log(Math.random);
+
+                console.log(typeof console.log);
+
+
+
+            //JSON-------------------------
+
+
+                //JSON (JS object notation ---syntax---double quotes used---no funtions---more universal)
+                //JSON is a less featurefull vesion of javascript object but can be usedeasily across platforms 
+                
+                //converting above product2 to JSON using """stringify"""
+
+                console.log(JSON.stringify(product2));
+                //now this shit can be sent to other languages or computers
+
+                
+                //now learning to make javascript out of JSON
+
+                const jsonString = JSON.stringify(product2);
+                console.log(JSON.parse(jsonString))
+            
+
+
+            //LOCAL STORAGE---------------
+
+
+        
+
+            //Objects are actually references , eg----------------
+
+            const object1 =
+            {
+                messagexyz : 'hello'
+                //and some huge code ,that makes it look messy and makes the process inefficient when copied again and again by making the code bulky
+            };
+
+            object2 = object1 ;
+
+            //now we reference it instead of copy pasting it again and again.
+
+            object1.messagexyz = 'Good Job!';
+
+            //here we can see that though object1 is a const value it does not restrict us to reach inside the reference object and then change the actual code ...
+
+            //objects cant be compared simply
+
+            const object3 = 
+            {messagexyz : 'Good Job!'};
+
+            console.log(object1===object2);
+            console.log(object1===object3);
+
+            const object4 =
+            
+            {
+                message : 'Good Job!' ,
+                price : '$79'
+            };
+
+            //const message = object4.message ;
+            const { message,price} = object4 ;
+
+            console.log(object4);
+            console.log (message);
+            console.log(price);
+
+            const object5=
+            {
+                message ,
+                method: function funtion1()
+                {
+                    console.log('method');
+                },
+                method()
+                {
+                    console.log('method');
+                }
+
+            };
+
+            console.log(object5);
+
+            
+
+
+
+    </script>
+</body>
+</html>
