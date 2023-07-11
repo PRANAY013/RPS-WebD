@@ -1,0 +1,34 @@
+p.wage
+{
+    font-family:arial;
+    font-size:30px;
+    font-weight: bold;
+    font-style: italic;
+    text-align:left;
+    text-decoration: underline;
+
+
+}
+p.icra
+{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:rgb(139, 137, 137);
+    line-height:30px;
+}
+
+p.dtupd
+{
+    color:grey;
+    font-size:15px;
+}
+p.veri
+{
+    color:grey;
+    font-size:15px;
+}
+span.workers
+{
+    color:red;
+
+}
