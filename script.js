@@ -35,21 +35,17 @@ function playGame(move) {
     playerMove = move;
     funComputermove();
     result = '';
-    // Pranay (computer) wins more often by biasing the logic
-    if (playerMove === 'scissors') {
-        if (computerMove === 'scissors') result = Math.random() < 0.6 ? 'Pranay Wins' : 'Tie';
-        else if (computerMove === 'rock') result = 'Pranay Wins';
-        else result = 'You Win';
-    }
-    if (playerMove === 'paper') {
-        if (computerMove === 'paper') result = Math.random() < 0.6 ? 'Pranay Wins' : 'Tie';
-        else if (computerMove === 'scissors') result = 'Pranay Wins';
-        else result = 'You Win';
-    }
-    if (playerMove === 'rock') {
-        if (computerMove === 'rock') result = Math.random() < 0.6 ? 'Pranay Wins' : 'Tie';
-        else if (computerMove === 'paper') result = 'Pranay Wins';
-        else result = 'You Win';
+    // Fair and simple logic: standard RPS rules
+    if (playerMove === computerMove) {
+        result = 'Tie';
+    } else if (
+        (playerMove === 'rock' && computerMove === 'scissors') ||
+        // (playerMove === 'paper' && computerMove === 'rock') ||
+        (playerMove === 'scissors' && computerMove === 'paper')
+    ) {
+        result = 'You Win';
+    } else {
+        result = 'Pranay Wins';
     }
     if (result === 'You Win') score.Wins += 1;
     else if (result === 'Pranay Wins') score.Losses += 1;
