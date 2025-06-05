@@ -40,7 +40,7 @@ function playGame(move) {
         result = 'Tie';
     } else if (
         (playerMove === 'rock' && computerMove === 'scissors') ||
-        // (playerMove === 'paper' && computerMove === 'rock') ||
+        (playerMove === 'paper' && computerMove === 'rock') ||
         (playerMove === 'scissors' && computerMove === 'paper')
     ) {
         result = 'You Win';
